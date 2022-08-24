@@ -1,0 +1,118 @@
+save path : ./vgg16_baseline/vgg16_base_1
+{'data_path': './data', 'dataset': 'cifar10', 'pretrain_path': './baseline/vgg16/vgg-exp-1.pth', 'ckpt_path': '', 'save_path': './vgg16_baseline/vgg16_base_1', 'mode': 'train', 'batch_size': 256, 'test_batch_size': 256, 'verbose': False, 'total_epoches': 160, 'method': 'ncc', 'exp_round': 1, 'lr': 0.1, 'schedule': [40, 80, 120], 'gammas': [0.2, 0.2, 0.2], 'momentum': 0.9, 'decay': 0.0005, 'seed': 1, 'depth': 16, 'no_cuda': False, 'ngpu': 1, 'workers': 2, 'rate_flop': 0.342, 'manualSeed': 2056, 'cuda': True, 'use_cuda': True}
+Random Seed: 2056
+python version : 3.10.4 | packaged by conda-forge | (main, Mar 30 2022, 08:38:02) [MSC v.1916 64 bit (AMD64)]
+torch  version : 1.11.0
+cudnn  version : 8200
+Pretrain path: ./baseline/vgg16/vgg-exp-1.pth
+Pruning Method: ncc
+=> network :
+ vgg(
+  (feature): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (8): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (9): ReLU(inplace=True)
+    (10): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (11): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (12): ReLU(inplace=True)
+    (13): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (14): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (15): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (16): ReLU(inplace=True)
+    (17): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (18): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (19): ReLU(inplace=True)
+    (20): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (21): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (22): ReLU(inplace=True)
+    (23): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (24): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (25): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (26): ReLU(inplace=True)
+    (27): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (28): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (29): ReLU(inplace=True)
+    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (31): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (32): ReLU(inplace=True)
+    (33): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (35): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (36): ReLU(inplace=True)
+    (37): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (38): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (39): ReLU(inplace=True)
+    (40): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (41): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (42): ReLU(inplace=True)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=512, out_features=512, bias=True)
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Linear(in_features=512, out_features=10, bias=True)
+  )
+)
+
+==>>[2022-06-22 03:22:36] [Epoch=000/160] [Need: 00:00:00] [learning_rate=0.1000] [Best : Accuracy=48.91, Error=51.09]
+
+==>>[2022-06-22 03:22:53] [Epoch=001/160] [Need: 00:55:06] [learning_rate=0.1000] [Best : Accuracy=55.30, Error=44.70]
+
+==>>[2022-06-22 03:23:10] [Epoch=002/160] [Need: 00:49:37] [learning_rate=0.1000] [Best : Accuracy=68.89, Error=31.11]
+
+==>>[2022-06-22 03:23:27] [Epoch=003/160] [Need: 00:47:24] [learning_rate=0.1000] [Best : Accuracy=75.62, Error=24.38]
+
+==>>[2022-06-22 03:24:00] [Epoch=005/160] [Need: 00:45:12] [learning_rate=0.1000] [Best : Accuracy=77.21, Error=22.79]
+
+==>>[2022-06-22 03:24:17] [Epoch=006/160] [Need: 00:44:34] [learning_rate=0.1000] [Best : Accuracy=80.28, Error=19.72]
+
+==>>[2022-06-22 03:27:19] [Epoch=017/160] [Need: 00:40:12] [learning_rate=0.1000] [Best : Accuracy=81.38, Error=18.62]
+
+==>>[2022-06-22 03:27:36] [Epoch=018/160] [Need: 00:39:55] [learning_rate=0.1000] [Best : Accuracy=81.85, Error=18.15]
+
+==>>[2022-06-22 03:28:10] [Epoch=020/160] [Need: 00:39:20] [learning_rate=0.1000] [Best : Accuracy=84.25, Error=15.75]
+
+==>>[2022-06-22 03:29:16] [Epoch=024/160] [Need: 00:38:09] [learning_rate=0.1000] [Best : Accuracy=85.96, Error=14.04]
+
+==>>[2022-06-22 03:33:43] [Epoch=040/160] [Need: 00:33:32] [learning_rate=0.0200] [Best : Accuracy=92.03, Error=7.97]
+
+==>>[2022-06-22 03:34:17] [Epoch=042/160] [Need: 00:32:58] [learning_rate=0.0200] [Best : Accuracy=92.05, Error=7.95]
+
+==>>[2022-06-22 03:34:34] [Epoch=043/160] [Need: 00:32:42] [learning_rate=0.0200] [Best : Accuracy=92.07, Error=7.93]
+
+==>>[2022-06-22 03:35:24] [Epoch=046/160] [Need: 00:31:51] [learning_rate=0.0200] [Best : Accuracy=92.31, Error=7.69]
+
+==>>[2022-06-22 03:44:52] [Epoch=080/160] [Need: 00:22:19] [learning_rate=0.0040] [Best : Accuracy=92.69, Error=7.31]
+
+==>>[2022-06-22 03:45:09] [Epoch=081/160] [Need: 00:22:02] [learning_rate=0.0040] [Best : Accuracy=92.74, Error=7.26]
+
+==>>[2022-06-22 03:45:26] [Epoch=082/160] [Need: 00:21:46] [learning_rate=0.0040] [Best : Accuracy=92.83, Error=7.17]
+
+==>>[2022-06-22 03:45:43] [Epoch=083/160] [Need: 00:21:29] [learning_rate=0.0040] [Best : Accuracy=93.02, Error=6.98]
+
+==>>[2022-06-22 03:46:16] [Epoch=085/160] [Need: 00:20:56] [learning_rate=0.0040] [Best : Accuracy=93.13, Error=6.87]
+
+==>>[2022-06-22 03:46:50] [Epoch=087/160] [Need: 00:20:22] [learning_rate=0.0040] [Best : Accuracy=93.20, Error=6.80]
+
+==>>[2022-06-22 03:47:23] [Epoch=089/160] [Need: 00:19:49] [learning_rate=0.0040] [Best : Accuracy=93.30, Error=6.70]
+
+==>>[2022-06-22 03:47:57] [Epoch=091/160] [Need: 00:19:15] [learning_rate=0.0040] [Best : Accuracy=93.37, Error=6.63]
+
+==>>[2022-06-22 03:55:26] [Epoch=118/160] [Need: 00:11:42] [learning_rate=0.0040] [Best : Accuracy=93.39, Error=6.61]
+
+==>>[2022-06-22 03:56:16] [Epoch=121/160] [Need: 00:10:52] [learning_rate=0.0008] [Best : Accuracy=93.51, Error=6.49]
+
+==>>[2022-06-22 03:56:50] [Epoch=123/160] [Need: 00:10:18] [learning_rate=0.0008] [Best : Accuracy=93.57, Error=6.43]
+
+==>>[2022-06-22 03:57:07] [Epoch=124/160] [Need: 00:10:02] [learning_rate=0.0008] [Best : Accuracy=93.60, Error=6.40]
+
+==>>[2022-06-22 03:58:30] [Epoch=129/160] [Need: 00:08:38] [learning_rate=0.0008] [Best : Accuracy=93.61, Error=6.39]
+
+==>>[2022-06-22 03:59:04] [Epoch=131/160] [Need: 00:08:05] [learning_rate=0.0008] [Best : Accuracy=93.62, Error=6.38]
