@@ -170,11 +170,13 @@ Also, refer to the script [scripts/run_resnet_imagenet_pruning_eval.sh](./script
 
 ## How to Cite this Work? 
 
-MDPI and ACS Style  
-Ghimire, D.; Kim, S.-H. Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks. Appl. Sci. 2023, 13, 316. https://doi.org/10.3390/app13010316
-
-AMA Style  
-Ghimire D, Kim S-H. Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks. Applied Sciences. 2023; 13(1):316. https://doi.org/10.3390/app13010316
-
-Chicago/Turabian Style  
-Ghimire, Deepak, and Seong-Heum Kim. 2023. "Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks" Applied Sciences 13, no. 1: 316. https://doi.org/10.3390/app13010316
+@article{ghimire2023magnitude,
+  title={Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks},
+  author={Ghimire, Deepak and Kim, Seong-Heum},
+  journal={Applied Sciences},
+  volume={13},
+  number={1},
+  pages={316},
+  year={2023},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
