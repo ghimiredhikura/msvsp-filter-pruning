@@ -170,6 +170,7 @@ Also, refer to the script [scripts/run_resnet_imagenet_pruning_eval.sh](./script
 
 ## How to Cite this Work? 
 
+```ruby
 @article{ghimire2023magnitude,
   title={Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks},
   author={Ghimire, Deepak and Kim, Seong-Heum},
@@ -177,6 +178,7 @@ Also, refer to the script [scripts/run_resnet_imagenet_pruning_eval.sh](./script
   volume={13},
   number={1},
   pages={316},
-  year={2023},
+  year={2022},
   publisher={Multidisciplinary Digital Publishing Institute}
 }
+```
