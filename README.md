@@ -1,8 +1,8 @@
-# [Magnitude and Similarity based Variable Rate Filter Pruning for Efficient Convolution Neural Networks](https://www.mdpi.com/2076-3417/13/1/316)
+# Magnitude and Similarity based Variable Rate Filter Pruning for Efficient Convolution Neural Networks
 
-Implementation of MSVFP with PyTorch. Pruning the selected set of filters & restructuring the network is based on [VainF/Torch-Pruning](https://github.com/VainF/Torch-Pruning).
+**Code for: Ghimire, D.; Kim, S.-H. Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks. Appl. Sci. 2022, 13, 316. https://doi.org/10.3390/app13010316**  
 
-
+Pruning the selected set of filters & restructuring the network is based on [VainF/Torch-Pruning](https://github.com/VainF/Torch-Pruning).
 
 ## Table of Contents
 
