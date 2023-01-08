@@ -166,7 +166,7 @@ Also, refer to the script [scripts/run_resnet_imagenet_pruning_eval.sh](./script
 
 ## ResNet on CIFAR-10
 
--- Will be released later ... 
+-- Will be released soon ... 
 
 ## How to Cite this Work? 
 
