@@ -1,4 +1,4 @@
-# Magnitude and Similarity based Variable Rate Filter Pruning for Efficient Convolution Neural Networks
+## Magnitude and Similarity based Variable Rate Filter Pruning for Efficient Convolution Neural Networks
 
 [**Ghimire, D.; Kim, S.-H. Magnitude and Similarity Based Variable Rate Filter Pruning for Efficient Convolution Neural Networks. Appl. Sci. 2022, 13, 316. https://doi.org/10.3390/app13010316**](https://doi.org/10.3390/app13010316)  
 
